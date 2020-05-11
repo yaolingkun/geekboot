@@ -1,0 +1,24 @@
+spring: 
+  pid: 
+    file: D://app.pid
+    fail-on-write-error: true #当无法写入pid文件的时候，是否抛出异常
+applicationPID:   
+    open: true #开启
+#db0我使用oracle，请按需修改
+db1:
+  url: jdbc:oracle:thin:@47.92.118.168:1521/ncbodsdb
+  driver: oracle.jdbc.driver.OracleDriver
+  username: schedule
+  password: schedule
+  mapper-locations: classpath:/mappers0/*Mapper.xml
+
+#db0我使用oracle，请按需修改
+db0:
+  url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+  driver: com.mysql.jdbc.Driver
+  username: root
+  password: 123456
+  mapper-locations: /config/mappers/mappers0   ##跟目录下
+# 日志配置  为空为项目跟目录下的logs  或者指定已经存在的目录  
+log:
+  path: 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springbootplus.mappers.mappers0.Db0Mapper">
+    <select id="getStudentNameFromDb0" parameterType="string" resultType="string">
+        select stu.firstName from person stu where stu.personId = #{id}
+    </select>
+ 
+    <update id="updateStudents0Name" parameterType="map">
+        update multidb_oracle_students stu set stu.name = #{name} where stu.id = #{id}
+    </update>
+</mapper>
