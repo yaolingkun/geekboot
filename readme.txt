@@ -6,7 +6,7 @@
 		Oracle: date精确到秒,timestamp精确到毫秒
 	
 
-增加日志记录
+日志记录
 	使用logback-spring.xml自定义日志输出
 	
 区分渠道:
@@ -16,7 +16,7 @@
 	优点：一个控制层对应一个请求，便于维护
 	           统一返回格式
 
-增加过滤器
+过滤器
 	使用FilterRegistrationBean注册过滤器；
 	注意：WebFilter注解配合Order注解，排序无效；@Order注解只能用于定义Bean的加载顺序，却真正无法控制Filter排序。
 
