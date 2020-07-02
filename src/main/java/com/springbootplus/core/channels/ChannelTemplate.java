@@ -25,16 +25,20 @@ public class ChannelTemplate {
 //				logger.warn("URL={}", url);
 				// http--.do,H5--hl,client--cl,微信--wx
 				if (url.endsWith(".do")) {
+					logParam.append(StringUtils.getSingleVerticalLine());
 					logParam = logParam.append(HttpChannel.getLogParam(request));
 					
 				}
 				if (url.endsWith(".hl")) {
+					logParam.append(StringUtils.getSingleVerticalLine());
 					logParam = logParam.append(H5Channel.getLogParam(request));
 				}
 				if (url.endsWith(".cl")) {
+					logParam.append(StringUtils.getSingleVerticalLine());
 					logParam = logParam.append(ClientChannel.getLogParam(request));
 				}
 				if (url.endsWith(".wx")) {
+					logParam.append(StringUtils.getSingleVerticalLine());
 					logParam = logParam.append(WXChannel.getLogParam(request));
 				}
 		return logParam.toString();
@@ -56,8 +60,6 @@ public class ChannelTemplate {
 		}
 		
 		commonParam.append("GlobalId:"+globalId);
-		commonParam.append(StringUtils.getSingleVerticalLine());
-		
 		return commonParam;
 	}
 	

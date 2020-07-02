@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.springbootplus.core.util.IPUtils;
 import com.springbootplus.core.util.StringUtils;
-import com.springbootplus.core.util.UserAgentUtils;
 
 /**
  * 
@@ -23,7 +22,7 @@ public class HttpChannel {
 
 	public static String getLogParam(HttpServletRequest request) {
 		StringBuffer logParam = new StringBuffer();
-		logParam.append(UserAgentUtils.getUserAgentInfo(request));
+//		logParam.append(UserAgentUtils.getUserAgentInfo(request));
 		
 		
 		logParam.append("IP:"+IPUtils.getIP(request));
