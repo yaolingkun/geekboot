@@ -1,37 +1,41 @@
 package com.springbootplus.core.model;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+@ApiModel("请求参数")
 public class Context implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Map<String,Object> date = new ConcurrentHashMap<String, Object>();
+	@ApiModelProperty(value = "数据")
+	private Map<String,Object> data = new HashMap<String, Object>();
 
 	/**
-	 * @return the date
+	 * @return the data
 	 */
-	public Object getDate(String key) {
-		return ((Object[])date.get(key))[0];
+	public Object getData(String key) {
+		return ((Object[])data.get(key))[0];
 	}
 	/**
-	 * @return the date
+	 * @return the data
 	 */
-	public String getStringDate(String key) {
-		return (String)((Object[])date.get(key))[0];
+	public String getStringData(String key) {
+		return (String)((Object[])data.get(key))[0];
 	}
 	/**
-	 * @param date the date to set
+	 * @param data the data to set
 	 */
-	public void setDate(String key ,Object value) {
-		date.put(key, value);
+	public void setData(String key ,Object value) {
+		data.put(key, value);
 	}
 	
-	public void setAllDate(Map<String, String[]> map){
-		date.putAll(map);
+	public void setAllData(Map<String, String[]> map){
+		data.putAll(map);
 	}
 
 }
