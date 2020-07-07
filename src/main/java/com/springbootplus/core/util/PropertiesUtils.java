@@ -3,15 +3,12 @@ package com.springbootplus.core.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -34,8 +31,13 @@ public class PropertiesUtils {
 	 * @return
 	 * @throws IOException
 	 */
-	public static String getExtPropertiesValue(String key) throws IOException{
-		getPropMap();
+	public static String getExtPropertiesValue(String key){
+		try {
+			getPropMap();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return proMap.get(key);
 	}
 	private static Map<String, String> getPropMap() throws IOException {
