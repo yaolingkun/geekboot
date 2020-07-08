@@ -57,7 +57,6 @@ public class GeekCache {
 		}
 		
 	}
-
 	private static void cleanCache(){
 		 Thread t = new Thread(new Runnable(){  
 	            public void run(){  
