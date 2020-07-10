@@ -1,8 +1,5 @@
 package com.springbootplus.core.exception;
 
-import java.io.FileNotFoundException;
-
-import javax.lang.model.type.UnknownTypeException;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -18,7 +15,8 @@ private static Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.cl
 	@ExceptionHandler(value=Exception.class)
 	@ResponseBody
 	public Object errorHandler(HttpServletRequest request,Exception e){
-		logger.info("-----捕获到异常-----");
+		logger.error("-----捕获到异常-----");
+		logger.error(e.toString());
 		//ajax请求异常返回
 //		if(null != request.getHeader("X-Requested-With") && "XMLHttpRequest".equals( request.getHeader("X-Requested-With").toString())){
 //			if (e instanceof NullPointerException) {

@@ -1,3 +1,7 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /springbootplus
 spring: 
   pid: 
     file: D://app.pid

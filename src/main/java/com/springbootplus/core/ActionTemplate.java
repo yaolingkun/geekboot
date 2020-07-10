@@ -1,5 +1,7 @@
 package com.springbootplus.core;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.springbootplus.core.model.Context;
 import com.springbootplus.core.model.Result;
 /**
@@ -44,5 +46,6 @@ public interface ActionTemplate {
 	 * 	    return JsonResult.ok(map);
 	 * 	}
 	 */
-	public Result execute(Context context);
+	public Result execute(Context context,HttpServletRequest request);
+	
 }

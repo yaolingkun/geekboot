@@ -1,3 +1,6 @@
+接口规范：
+	
+
 功能：
 多数据源
 	手工配置数据源
@@ -9,12 +12,13 @@
 日志记录
 	使用logback-spring.xml自定义日志输出
 	
+自定义日志
+	/springbootplus/src/main/java/com/springbootplus/core/logger/Logger.java
+	
 区分渠道:
 	http--.do,H5--hl,client--cl,微信--wx
 
-限制请求绑定方法（execute）、参数(Context)、返回值类型(Map)
-	优点：一个控制层对应一个请求，便于维护
-	           统一返回格式
+
 
 过滤器
 	使用FilterRegistrationBean注册过滤器；
@@ -40,6 +44,9 @@ json格式数据
 
 全局异常处理
 
+限制请求绑定方法（execute）、参数(Context)、返回值类型(Map)
+	优点：一个控制层对应一个请求，便于维护
+	           统一返回格式
 
 全链路跟踪
 ---------------------------------------------规则-------------------------------------------

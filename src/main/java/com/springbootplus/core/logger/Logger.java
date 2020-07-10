@@ -66,6 +66,9 @@ public class Logger {
 
 	}
 	
+	public  void info(HttpServletRequest request) {
+		info(null,request);
+	}
 
 	public  void info(String s,HttpServletRequest request) {
 		if (level <= INFO_LEVEL) {
